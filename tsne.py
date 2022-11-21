@@ -6,7 +6,7 @@ import numpy as np
 
 with open('/data/junbeom/repo/mmaction2/lab/tsm_ucf101/tsm_k400_to_ucf101_feature.json', 'r') as f :
     feature_data = json.load(f)
-with open('/data/junbeom/repo/mmaction2/lab/data/ann_for_plt_ucf101_test_01.txt', 'r') as f :
+with open('/data/junbeom/repo/mmaction2/lab/data/split/ucf101/ann_for_plt_ucf101_test_01.txt', 'r') as f :
     ucf101_split_list = f.readlines()
 
 dim = 2
@@ -16,6 +16,7 @@ tsne_result = model.fit_transform(feature_data)
 # print(tsne_result)
 print(len(tsne_result)) 
 print(len(tsne_result[0])) 
+print(type(feature_data))
 print(len(feature_data)) 
 print(len(feature_data[0])) 
 # 3783 2 3783 2048 in i3d
